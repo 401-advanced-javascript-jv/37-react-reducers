@@ -2,6 +2,15 @@
   "name": "37-redux-reducers",
   "version": "0.1.0",
   "private": true,
+  "devDependencies": {
+    "prettier": "latest"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "arrowParens": "always",
+    "endOfLine": "lf"
+  },
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
