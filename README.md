@@ -16,12 +16,18 @@
 * `npm start`
 
 **Categories**
-- CREATE
-- UPDATE
-- DELETE
 
+- CREATE
+
+- UPDATE
+
+- DELETE
 
 **Items**
+
 - CREATE
+
 - UPDATE
+
 - DELETE
+
