@@ -23,7 +23,7 @@
 ```$xslt
 {
   type: 'BOX_CREATE',
-  payload: { id: 30, name: 'Box C8' }
+  payload: { id: 3, name: 'Box C8' }
 }
 ```
 
@@ -32,7 +32,7 @@
 ```$xslt
 {
   type: 'BOX_UPDATE',
-  payload: { id: 10, name:'newname' }
+  payload: { id: 1, name:'newname' }
 }
 ```
 
@@ -41,14 +41,36 @@
 ```$xslt
 {
   type: 'BOX_DELETE',
-  payload: { id: 30, name: 'newname' }
+  payload: { id: 3, name: 'newname' }
 }
 ```
 
-**Items**
+**Cats**
 
 - CREATE
 
+```$xslt
+{
+  type: 'CAT_CREATE',
+  payload: { name: 'New Cat! Yay!', boxId: 2 }
+}
+```
+
 - UPDATE
 
+```$xslt
+{
+  type: 'CAT_UPDATE',
+  payload: { id: 3, name:'newname', boxId: 1 }
+}
+```
+
 - DELETE
+
+```$xslt
+{
+  type: 'CAT_DELETE',
+  payload: { id: 3 }
+}
+```
+

@@ -4,16 +4,15 @@ import { useSelector } from 'react-redux';
 export default () => {
   const cats = useSelector((state) => state.cats);
   const boxes = useSelector((state) => state.boxes);
-
   return (
     <ul>
       {boxes.map((box) => (
-        <li>
+        <li key={box.name}>
           <h3>{box.name}</h3>
           <ul>
-            {Object.keys(cats)
-              .filter((catId) => cats[catId].box === box.id)
-              .map((catId) => <li>{cats[catId].name}</li>)}
+            {cats[box.id].map((cat) => (
+              <li key={cat.name}>{cat.name}</li>
+            ))}
           </ul>
         </li>
       ))}

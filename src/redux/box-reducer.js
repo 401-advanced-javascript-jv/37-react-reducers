@@ -1,4 +1,4 @@
-const defaultState = [{ id: 10, name: 'A1' }, { id: 20, name: 'B1' }];
+const defaultState = [{ id: 1, name: 'A1' }, { id: 2, name: 'B1' }];
 export default (state = defaultState, { type, payload }) => {
   switch (type) {
     case 'BOX_CREATE':
