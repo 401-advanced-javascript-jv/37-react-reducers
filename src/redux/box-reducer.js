@@ -1,12 +1,15 @@
-export default (state = [], {type, payload}) => {
+const defaultState = [{ id: 10, name: 'A1' }, { id: 20, name: 'B1' }];
+export default (state = defaultState, { type, payload }) => {
   switch (type) {
-  case 'BOX_CREATE':
-    return [...state, payload];
-  case 'BOX_UPDATE':
-    return [...state];
-  case 'BOX_DELETE':
-    return [...state];
-  default:
-    return state;
+    case 'BOX_CREATE':
+      return [...state, payload];
+    case 'BOX_UPDATE':
+      return state.map((box) =>
+        box.id === payload.id ? payload : box
+      );
+    case 'BOX_DELETE':
+      return state.filter((box) => box.id !== payload.id);
+    default:
+      return state;
   }
-}
+};

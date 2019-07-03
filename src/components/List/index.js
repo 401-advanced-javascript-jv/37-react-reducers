@@ -1,18 +1,22 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-export default function List(props) {
+export default () => {
+  const cats = useSelector((state) => state.cats);
+  const boxes = useSelector((state) => state.boxes);
+
   return (
     <ul>
-      {props.boxes.map(box => (
+      {boxes.map((box) => (
         <li>
           <h3>{box.name}</h3>
           <ul>
-            {props.cats.map(cats => (
-              <li>{cats.name}</li>
-            ))}
+            {Object.keys(cats)
+              .filter((catId) => cats[catId].box === box.id)
+              .map((catId) => <li>{cats[catId].name}</li>)}
           </ul>
         </li>
       ))}
     </ul>
-  )
-}
+  );
+};

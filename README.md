@@ -5,7 +5,8 @@
 ### Author: Jesse Van Volkinburg
 
 ### Links and Resources
-* [submission PR](http://xyz.com)
+
+- [submission PR](http://xyz.com)
 
 ### Setup
 
@@ -13,15 +14,36 @@
 
 **App**
 
-* `npm start`
+- `npm start`
 
-**Categories**
+**Boxes**
 
 - CREATE
 
+```$xslt
+{
+  type: 'BOX_CREATE',
+  payload: { id: 30, name: 'Box C8' }
+}
+```
+
 - UPDATE
 
+```$xslt
+{
+  type: 'BOX_UPDATE',
+  payload: { id: 10, name:'newname' }
+}
+```
+
 - DELETE
+
+```$xslt
+{
+  type: 'BOX_DELETE',
+  payload: { id: 30, name: 'newname' }
+}
+```
 
 **Items**
 
@@ -30,4 +52,3 @@
 - UPDATE
 
 - DELETE
-
